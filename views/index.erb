@@ -19,8 +19,9 @@
     
     <div class="container-fluid">
       <center><h1>Inspirational Quotes</h1></center>
-      <form>
-        <br><center> <span id="question">How are you feeling today?</span>
+      <form method="post" action="/result">
+        <br>
+        <center> <span id="question">How are you feeling today?</span>
         
           <select  id="feeling" name="feeling"> 
             <option value="blank"></option>
@@ -30,12 +31,14 @@
             <option value="anxious">Anxious</option>
             <option value="other">Others</option>
           </select>
-          
-          </center>
-          </form>
+
+        </center>
+        
+        <center>
+          <input id="Subs" type="submit" value="Get a quote!">
+        </center>
+      </form>
           <br>
-          
-    <center>  <input id="Subs" type="submit" value="Get a quote!"> </center>
     </div>
     
   </body>

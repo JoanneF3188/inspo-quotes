@@ -2,9 +2,6 @@
 
 require "net/http"
 require "uri"
-require "pp"
-
-
 
 class Quote
     attr_reader :quote
