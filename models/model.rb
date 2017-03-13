@@ -10,7 +10,9 @@ response = Net::HTTP.post_form(uri, {"method" => "getQuote", "key" => "457653", 
 
 hash = response.body
 
-puts eval(hash).first[1]
+@quote = eval(hash).first[1]
+
+puts @quote
 
 # class Get_quote
     
