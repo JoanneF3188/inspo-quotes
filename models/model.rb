@@ -1,19 +1,17 @@
-# require 'net/http'
-# require 'json'
-# require 'pp'
- 
-# url = 'http://api.forismatic.com/api/1.0/'
-# uri = URI(url)
-# response = Net::HTTP.get(uri)
-# JSON.parse(response)
-
 # http://api.forismatic.com/api/1.0/
 
 require "net/http"
 require "uri"
+require "pp"
 
 uri = URI.parse("http://api.forismatic.com/api/1.0/")
 
 response = Net::HTTP.post_form(uri, {"method" => "getQuote", "key" => "457653", "format" => "json", "lang" => "en"})
 
-puts response.body
+hash = response.body
+
+puts eval(hash).first[1]
+
+# class Get_quote
+    
+# end
