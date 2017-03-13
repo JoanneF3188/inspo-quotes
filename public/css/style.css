@@ -1,4 +1,6 @@
-.container-fluid{
+.container-fluid, body{
     text-shadow: 100px;
-    color: #;
+    border-width: 10px;
+    font-size: 40px;
+    background-image: url(http://newnaturewallpapers.in/image/sun/30-sun-set-wallpaper/30-sun-set-wallpaper-12.jpg);
 }
