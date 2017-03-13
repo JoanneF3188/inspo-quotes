@@ -11,6 +11,7 @@ class ApplicationController < Sinatra::Base
   end
   
   post '/result' do
+    
     erb :result
   end
   
