@@ -2,5 +2,24 @@
     text-shadow: 100px;
     border-width: 10px;
     font-size: 40px;
-    background-image: url(http://newnaturewallpapers.in/image/sun/30-sun-set-wallpaper/30-sun-set-wallpaper-12.jpg);
+    background-image: url(../images/calm.jpg);
 }
+
+h1 {
+    font-size: 100px;
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+}
+
+html {
+    text-align: center;
+}
+
+#question {
+    color: #263849;
+}
+
+
+
+
+
