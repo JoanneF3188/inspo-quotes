@@ -14,7 +14,7 @@ class ApplicationController < Sinatra::Base
   end
   
   post '/result' do
-    params[:quote]
+    @quote = Quote.new.get_quote
     erb :result
   end
   
