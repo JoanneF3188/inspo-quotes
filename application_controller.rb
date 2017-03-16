@@ -15,6 +15,9 @@ class ApplicationController < Sinatra::Base
   
   post '/result' do
     @quote = Quote.new.get_quote
+     user_feeling= params[:feeling]
+     Quote.new(user_feeling)
+     
     erb :result
   end
   
