@@ -13,6 +13,7 @@ h1 {
     font-size: 100px;
     font-family: 'Permanent Marker', cursive;
     color: white;
+    text-shadow: 200px;
 }
 
 html {
@@ -20,7 +21,7 @@ html {
 }
 
 #question {
-    color: #263849;
+   color: black; 
 }
 
 
