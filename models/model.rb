@@ -10,11 +10,9 @@ class Quote
         uri = URI.parse("http://api.forismatic.com/api/1.0/")
         response = Net::HTTP.post_form(uri, {"method" => "getQuote", "key" => "457653", "format" => "json", "lang" => "en"})
         hash = eval(response.body)
-      
-         @quote = hash
         @quote = hash.first[1]
         puts @quote
-        @feeling = feeling 
+        @feeling = feeling
     end
     
     def get_quote
@@ -22,10 +20,8 @@ class Quote
     end
     
     def match_quote
-        
-             match_quote = params[@quote]
+        @quote.split()
         end
-    
     end
 
 end
