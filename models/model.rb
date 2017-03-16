@@ -6,11 +6,12 @@ require "uri"
 class Quote
     attr_reader :quote, :feeling
     
-    def initialize(feeling)
+    def initialize(*feeling)
         uri = URI.parse("http://api.forismatic.com/api/1.0/")
         response = Net::HTTP.post_form(uri, {"method" => "getQuote", "key" => "457653", "format" => "json", "lang" => "en"})
         hash = eval(response.body)
         @quote = hash.first[1]
+        # @author = hash[:quoteAuthor] 
         puts @quote
         @feeling = feeling
     end
@@ -21,7 +22,8 @@ class Quote
     
     def match_quote
         @quote.split()
-        end
     end
-
+    
 end
+
+
