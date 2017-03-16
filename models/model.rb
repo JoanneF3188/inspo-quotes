@@ -12,7 +12,7 @@ class Quote
         hash = eval(response.body)
         @quote = hash.first[1]
         puts @quote
-
+        # @author = hash.second[1] DOESNT WORK
     end
     
     def get_quote
