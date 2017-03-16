@@ -10,6 +10,7 @@ class Quote
         uri = URI.parse("http://api.forismatic.com/api/1.0/")
         response = Net::HTTP.post_form(uri, {"method" => "getQuote", "key" => "457653", "format" => "json", "lang" => "en"})
         hash = eval(response.body)
+
          @quote = hash
         @quote = hash.first[1]
         puts @quote
@@ -28,10 +29,3 @@ class Quote
     end
 
 end
-
-        # uri = URI.parse("http://api.forismatic.com/api/1.0/")
-        # response = Net::HTTP.post_form(uri, {"method" => "getQuote", "key" => "457653", "format" => "json", "lang" => "en"})
-        # hash = eval(response.body)
-        # @quote = hash.first[1]
-        
-        # puts @quote
