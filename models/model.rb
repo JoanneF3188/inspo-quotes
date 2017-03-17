@@ -9,8 +9,8 @@ class Quote
     def initialize(*feeling)
         uri = URI.parse("http://api.forismatic.com/api/1.0/")
         response = Net::HTTP.post_form(uri, {"method" => "getQuote", "key" => "457653", "format" => "json", "lang" => "en"})
-        hash = eval(response.body) # Needed to get quotes from body of the file
-        @quote = hash.first[1] # Grabs the "method" or quote from response
+        hash = eval(response.body) # turns the API info into a hash; Needed to get quotes from body of the file
+        @quote = hash.first[1] # Goes into the hash and grabs the first key-value pair and grabs the value
         # @author = hash[:quoteAuthor]
         @feeling = feeling
     end

@@ -18,7 +18,7 @@ class ApplicationController < Sinatra::Base
     # user_quote_feeling = Quote.new(user_feeling) #replaces the selected feeling into the class
     # user_quote_feeling.match_quote #match the quote
     @quote = Quote.new.get_quote #Gets quote to /result.rb
-    erb :result
+    erb :result #goes/displays to result.erb
   end
   
 end
