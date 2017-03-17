@@ -14,9 +14,10 @@ class ApplicationController < Sinatra::Base
   end
   
   post '/result' do
-    @quote = Quote.new.get_quote
-    user_feeling= params[:feeling]
-    Quote.new(user_feeling)
+    # user_feeling= params[:feeling] #grabs the feeling selected in index.rb
+    # user_quote_feeling = Quote.new(user_feeling) #replaces the selected feeling into the class
+    # user_quote_feeling.match_quote #match the quote
+    @quote = Quote.new.get_quote #Gets quote to /result.rb
     erb :result
   end
   
